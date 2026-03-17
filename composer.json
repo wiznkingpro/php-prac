@@ -1,0 +1,23 @@
+{
+    "name": "wiznkingpro/php-prac",
+    "description": "php project",
+    "type": "project",
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Wiznkingpro"
+        }
+    ],
+
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4 | ^8.0"
+    },
+    "autoload": {
+       "psr-4": {
+           "Src\\": "core/Src/",
+           "": "app/"
+       }
+   }
+}
