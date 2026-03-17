@@ -23,25 +23,34 @@ class Route
 
    public function start(): void
    {
+       // 1. Берем путь и очищаем от GET-параметров (?id=1)
        $path = explode('?', $_SERVER['REQUEST_URI'])[0];
-       $path = substr($path, strlen(self::$prefix) + 1);
+       
+       // 2. Убираем префикс, если он задан
+       if (!empty(self::$prefix)) {
+           $path = str_replace(self::$prefix, '', $path);
+       }
+
+       // 3. ГЛАВНОЕ: убираем лишние слеши по краям. 
+       // Теперь "/" превратится в "", а "/go/" в "go"
+       $path = trim($path, '/');
 
        if (!array_key_exists($path, self::$routes)) {
-           throw new Error('This path does not exist');
+           // Выведем для отладки, что именно не нашел роутер
+           throw new Error("Path [$path] does not exist");
        }
 
        $class = self::$routes[$path][0];
        $action = self::$routes[$path][1];
 
        if (!class_exists($class)) {
-           throw new Error('This class does not exist');
+           throw new Error("Class [$class] does not exist");
        }
 
        if (!method_exists($class, $action)) {
-           throw new Error('This method does not exist');
+           throw new Error("Method [$action] does not exist in $class");
        }
 
-
-       call_user_func([new $class, $action]);
+       call_user_func([new $class, $action], new Request());
    }
 }
