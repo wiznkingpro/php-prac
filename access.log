@@ -273,3 +273,4 @@
 10.30.8.22 - - [16/Mar/2026:22:51:04 -0700] "POST /signup HTTP/1.1" 302 1026 "http://mpsvaba-m4.wsr.ru/signup" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
 10.30.8.22 - - [16/Mar/2026:22:51:05 -0700] "GET /go HTTP/1.1" 200 663 "http://mpsvaba-m4.wsr.ru/signup" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
 10.30.8.22 - - [16/Mar/2026:22:51:12 -0700] "GET /go HTTP/1.1" 200 664 "http://mpsvaba-m4.wsr.ru/signup" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+10.30.8.22 - - [16/Mar/2026:22:52:14 -0700] "GET /go HTTP/1.1" 200 664 "http://mpsvaba-m4.wsr.ru/signup" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"

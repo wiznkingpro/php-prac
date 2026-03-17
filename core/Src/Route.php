@@ -50,7 +50,7 @@ class Route
        call_user_func([new $class, $action], new Request());
    }
 
-   public function redirect(string $url): void
+public function redirect(string $url): void
 {
    header('Location: ' . $this->getUrl($url));
 }
