@@ -23,20 +23,16 @@ class Route
 
    public function start(): void
    {
-       // 1. Берем путь и очищаем от GET-параметров (?id=1)
        $path = explode('?', $_SERVER['REQUEST_URI'])[0];
        
-       // 2. Убираем префикс, если он задан
+
        if (!empty(self::$prefix)) {
            $path = str_replace(self::$prefix, '', $path);
        }
 
-       // 3. ГЛАВНОЕ: убираем лишние слеши по краям. 
-       // Теперь "/" превратится в "", а "/go/" в "go"
        $path = trim($path, '/');
 
        if (!array_key_exists($path, self::$routes)) {
-           // Выведем для отладки, что именно не нашел роутер
            throw new Error("Path [$path] does not exist");
        }
 
@@ -53,4 +49,20 @@ class Route
 
        call_user_func([new $class, $action], new Request());
    }
+
+   public function redirect(string $url): void
+{
+   header('Location: ' . $this->getUrl($url));
+}
+
+public function getUrl(string $url): string
+{
+   return self::$prefix . $url;
+}
+
+public function __construct(string $prefix = '')
+{
+   self::setPrefix($prefix);
+}
+
 }
