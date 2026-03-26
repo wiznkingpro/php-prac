@@ -7,7 +7,6 @@ class Phone extends Model
 {
     protected $primaryKey = 'phones_id';
     public $timestamps = false;
+    protected $fillable = ['phone_number', 'subscribers_id', 'device_id', 'status'];
 
-    // Укажите колонку с номером телефона, если она не 'number'
-    // protected $fillable = ['number', 'subscriber_id'];
 }

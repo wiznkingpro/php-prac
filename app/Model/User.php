@@ -14,7 +14,8 @@ class User extends Model implements IdentityInterface
 
    public $timestamps = false;
    protected $fillable = [
-       'last_name',
+        'login',
+        'last_name',
        'first_name',
        'middle_name',
        'role',
@@ -31,24 +32,28 @@ class User extends Model implements IdentityInterface
        });
    }
 
-   //Выборка пользователя по первичному ключу
    public function findIdentity(int $id)
    {
        return self::where('users_id', $id)->first();
    }
 
-   //Возврат первичного ключа
    public function getId(): int
    {
        return $this->users_id;
    }
 
-public function attemptIdentity(array $credentials)
-{
-    return self::where([
-        'last_name' => $credentials['last_name'], // Ищем по фамилии
-        'password' => md5($credentials['password'])
-    ])->first();
-}
+    public function attemptIdentity(array $credentials)
+    {
+        return self::where([
+            'last_name' => $credentials['last_name'], 
+            'password' => md5($credentials['password'])
+        ])->first();
+    }
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class, 'departments_id', 'departments_id');
+    }
+
 
 }

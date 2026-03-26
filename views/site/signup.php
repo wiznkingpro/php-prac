@@ -5,7 +5,6 @@
 <input type="text" name="first_name" placeholder="Имя">
 <input type="text" name="middle_name" placeholder="Отчество">
 <input type="password" name="password" placeholder="Пароль">
-<!-- Не забудьте скрытые или обязательные поля -->
 <input type="hidden" name="role" value="user">
 <input type="hidden" name="status" value="active">
 <label>Департамент:</label>
