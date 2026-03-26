@@ -1,9 +1,12 @@
-<h1>Список статей</h1>
-<ol>
-   <?php
-   foreach ($posts as $post) {
-       echo '<li>' . $post->title . '</li>';
+<h1>Список номеров телефонов</h1>
 
-   }
-   ?>
-</ol>
+<?php if (count($phones) > 0): ?>
+    <ul>
+        <?php foreach ($phones as $phone): ?>
+            <li>ID: <?= $phone->phones_id ?> | Номер: <?= $phone->phone_number  ?> | Статус: <?= $phone->status ?></li>
+
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <p>Номера не найдены.</p>
+<?php endif; ?>

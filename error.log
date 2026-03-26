@@ -1,121 +1,28 @@
-[Mon Mar 16 18:58:34.555126 2026] [core:alert] [pid 1388925] [client 10.30.8.22:44742] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 18:58:51.695392 2026] [core:alert] [pid 1388927] [client 10.30.8.22:44750] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 18:59:23.829965 2026] [core:alert] [pid 1388930] [client 10.30.8.22:51110] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 18:59:24.409185 2026] [core:alert] [pid 1388931] [client 10.30.8.22:60852] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:04:57.208766 2026] [core:alert] [pid 1395160] [client 10.30.8.22:49422] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:04:57.941842 2026] [core:alert] [pid 1395161] [client 10.30.8.22:49428] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:04:58.198692 2026] [core:alert] [pid 1395162] [client 10.30.8.22:49442] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:04:58.804058 2026] [core:alert] [pid 1395163] [client 10.30.8.22:49452] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:04:59.266256 2026] [core:alert] [pid 1395164] [client 10.30.8.22:49454] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:06:18.218585 2026] [core:alert] [pid 1396325] [client 10.30.8.22:42134] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:06:18.627586 2026] [core:alert] [pid 1396326] [client 10.30.8.22:42138] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:06:30.119960 2026] [core:alert] [pid 1396327] [client 10.30.8.22:42148] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:07:36.114214 2026] [core:alert] [pid 1396339] [client 10.30.8.22:51750] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:07:36.681059 2026] [core:alert] [pid 1396340] [client 10.30.8.22:51766] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:07:39.682838 2026] [core:alert] [pid 1396342] [client 10.30.8.22:51772] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:07:40.905838 2026] [core:alert] [pid 1396343] [client 10.30.8.22:51788] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:07:41.267114 2026] [core:alert] [pid 1396344] [client 10.30.8.22:51802] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:10:20.508051 2026] [core:alert] [pid 1398696] [client 10.30.8.22:54166] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:10:55.451405 2026] [core:alert] [pid 1398707] [client 10.30.8.22:54182] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off, referer: http://wsr.ru/
-[Mon Mar 16 19:11:02.320156 2026] [core:alert] [pid 1398708] [client 10.30.8.22:54100] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:11:05.144258 2026] [core:alert] [pid 1398710] [client 10.30.8.22:54114] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:11:30.140271 2026] [core:alert] [pid 1398711] [client 10.30.8.22:45548] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:11:30.372492 2026] [core:alert] [pid 1398712] [client 10.30.8.22:45416] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:11:30.576585 2026] [core:alert] [pid 1398713] [client 10.30.8.22:45420] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:11:30.761167 2026] [core:alert] [pid 1398714] [client 10.30.8.22:45422] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:11:30.942916 2026] [core:alert] [pid 1398715] [client 10.30.8.22:45438] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:11:43.403314 2026] [core:alert] [pid 1398720] [client 10.30.8.22:45440] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:11:49.471772 2026] [core:alert] [pid 1398721] [client 10.30.8.22:55866] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:11:52.748996 2026] [core:alert] [pid 1398724] [client 10.30.8.22:36346] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:12:13.937866 2026] [core:alert] [pid 1399836] [client 10.30.8.22:36358] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:35:34.923989 2026] [core:alert] [pid 1418018] [client 10.30.8.22:57304] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:35:35.561004 2026] [core:alert] [pid 1418019] [client 10.30.8.22:57316] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:35:36.672426 2026] [core:alert] [pid 1418021] [client 10.30.8.22:57318] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:35:36.953932 2026] [core:alert] [pid 1418022] [client 10.30.8.22:33020] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:35:37.143476 2026] [core:alert] [pid 1418023] [client 10.30.8.22:33034] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:35:45.668248 2026] [core:alert] [pid 1418024] [client 10.30.8.22:33042] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:35:46.392502 2026] [core:alert] [pid 1418025] [client 10.30.8.22:33058] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:35:51.202326 2026] [core:alert] [pid 1418026] [client 10.30.8.22:42866] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:35:58.420901 2026] [core:alert] [pid 1418027] [client 10.30.8.22:42874] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:36:03.709276 2026] [core:alert] [pid 1418667] [client 10.30.8.22:42588] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:36:33.754745 2026] [core:alert] [pid 1419140] [client 10.30.8.22:42596] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:36:36.930350 2026] [core:alert] [pid 1419141] [client 10.30.8.22:52384] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:36:54.170926 2026] [core:alert] [pid 1419143] [client 10.30.8.22:52386] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:36:54.633696 2026] [core:alert] [pid 1419144] [client 10.30.8.22:47850] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:36:54.852836 2026] [core:alert] [pid 1419145] [client 10.30.8.22:47858] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:36:55.051330 2026] [core:alert] [pid 1419146] [client 10.30.8.22:47874] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:36:55.234360 2026] [core:alert] [pid 1419147] [client 10.30.8.22:47890] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:36:55.394602 2026] [core:alert] [pid 1419148] [client 10.30.8.22:47904] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:37:12.825754 2026] [core:alert] [pid 1419163] [client 10.30.8.22:47906] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:37:17.274833 2026] [core:alert] [pid 1419165] [client 10.30.8.22:33012] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:37:23.985863 2026] [core:alert] [pid 1419167] [client 10.30.8.22:51362] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:37:24.610610 2026] [core:alert] [pid 1419168] [client 10.30.8.22:51364] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:37:25.070552 2026] [core:alert] [pid 1419169] [client 10.30.8.22:51380] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:37:34.046620 2026] [core:alert] [pid 1419170] [client 10.30.8.22:51388] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:37:39.702028 2026] [core:alert] [pid 1419182] [client 10.30.8.22:44444] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:38:32.978886 2026] [core:alert] [pid 1420313] [client 10.30.8.22:36704] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:38:33.240842 2026] [core:alert] [pid 1420315] [client 10.30.8.22:36716] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:38:33.469117 2026] [core:alert] [pid 1420316] [client 10.30.8.22:36730] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:38:40.652287 2026] [core:alert] [pid 1420317] [client 10.30.8.22:36738] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:38:42.100999 2026] [core:alert] [pid 1420318] [client 10.30.8.22:37364] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:05.339280 2026] [core:alert] [pid 1421358] [client 10.30.8.22:41606] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:05.722418 2026] [core:alert] [pid 1421465] [client 10.30.8.22:41612] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:05.932389 2026] [core:alert] [pid 1421514] [client 10.30.8.22:41616] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:52.292498 2026] [core:alert] [pid 1421515] [client 10.30.8.22:59310] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:52.639735 2026] [core:alert] [pid 1421516] [client 10.30.8.22:44056] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:52.863083 2026] [core:alert] [pid 1421517] [client 10.30.8.22:44072] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:53.079670 2026] [core:alert] [pid 1421518] [client 10.30.8.22:44080] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:53.279911 2026] [core:alert] [pid 1421519] [client 10.30.8.22:44088] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:53.599632 2026] [core:alert] [pid 1421520] [client 10.30.8.22:44092] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:54.382286 2026] [core:alert] [pid 1421521] [client 10.30.8.22:44098] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:40:54.641724 2026] [core:alert] [pid 1421522] [client 10.30.8.22:44110] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:41:47.732025 2026] [core:alert] [pid 1421526] [client 10.30.8.22:38026] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:41:48.184845 2026] [core:alert] [pid 1421527] [client 10.30.8.22:38030] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:22.863428 2026] [core:alert] [pid 1422640] [client 10.30.8.22:38046] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:23.218191 2026] [core:alert] [pid 1422641] [client 10.30.8.22:39454] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:29.974735 2026] [core:alert] [pid 1422642] [client 10.30.8.22:39458] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:33.203931 2026] [core:alert] [pid 1422643] [client 10.30.8.22:35842] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:39.457847 2026] [core:alert] [pid 1422644] [client 10.30.8.22:35850] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:42.761595 2026] [core:alert] [pid 1422645] [client 10.30.8.22:36700] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:43.086686 2026] [core:alert] [pid 1422646] [client 10.30.8.22:36714] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:45.577889 2026] [core:alert] [pid 1422647] [client 10.30.8.22:36724] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:47.957240 2026] [core:alert] [pid 1422648] [client 10.30.8.22:36734] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:42:48.452616 2026] [core:alert] [pid 1422649] [client 10.30.8.22:49618] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:44:18.447657 2026] [core:alert] [pid 1423813] [client 10.30.8.22:54340] /srv/users/piuxhnsp/mpsvaba-m4/public/.htaccess: RewriteEngine must be On or Off
-[Mon Mar 16 19:49:24.554392 2026] [php:warn] [pid 1428922] [client 10.30.8.22:48532] PHP Warning:  include(/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php): Failed to open stream: No such file or directory in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:49:24.554475 2026] [php:warn] [pid 1428922] [client 10.30.8.22:48532] PHP Warning:  include(): Failed opening '/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php' for inclusion (include_path='.:/usr/share/php') in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:49:24.554507 2026] [php:warn] [pid 1428922] [client 10.30.8.22:48532] PHP Warning:  Trying to access array offset on false in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:49:24.554514 2026] [php:warn] [pid 1428922] [client 10.30.8.22:48532] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:50:13.810459 2026] [php:warn] [pid 1428923] [client 10.30.8.22:48540] PHP Warning:  include(/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php): Failed to open stream: No such file or directory in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:50:13.810512 2026] [php:warn] [pid 1428923] [client 10.30.8.22:48540] PHP Warning:  include(): Failed opening '/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php' for inclusion (include_path='.:/usr/share/php') in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:50:13.810533 2026] [php:warn] [pid 1428923] [client 10.30.8.22:48540] PHP Warning:  Trying to access array offset on false in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:50:13.810537 2026] [php:warn] [pid 1428923] [client 10.30.8.22:48540] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:50:14.626220 2026] [php:warn] [pid 1428923] [client 10.30.8.22:48540] PHP Warning:  include(/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php): Failed to open stream: No such file or directory in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:50:14.626254 2026] [php:warn] [pid 1428923] [client 10.30.8.22:48540] PHP Warning:  include(): Failed opening '/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php' for inclusion (include_path='.:/usr/share/php') in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:50:14.626264 2026] [php:warn] [pid 1428923] [client 10.30.8.22:48540] PHP Warning:  Trying to access array offset on false in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:50:14.626268 2026] [php:warn] [pid 1428923] [client 10.30.8.22:48540] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:51:42.997476 2026] [php:warn] [pid 1430044] [client 10.30.8.22:37154] PHP Warning:  include(/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php): Failed to open stream: No such file or directory in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:51:42.997572 2026] [php:warn] [pid 1430044] [client 10.30.8.22:37154] PHP Warning:  include(): Failed opening '/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php' for inclusion (include_path='.:/usr/share/php') in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:51:42.997601 2026] [php:warn] [pid 1430044] [client 10.30.8.22:37154] PHP Warning:  Trying to access array offset on false in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:51:42.997607 2026] [php:warn] [pid 1430044] [client 10.30.8.22:37154] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:51:43.485668 2026] [php:warn] [pid 1430044] [client 10.30.8.22:37154] PHP Warning:  include(/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php): Failed to open stream: No such file or directory in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:51:43.485701 2026] [php:warn] [pid 1430044] [client 10.30.8.22:37154] PHP Warning:  include(): Failed opening '/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php' for inclusion (include_path='.:/usr/share/php') in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:51:43.485711 2026] [php:warn] [pid 1430044] [client 10.30.8.22:37154] PHP Warning:  Trying to access array offset on false in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:51:43.485718 2026] [php:warn] [pid 1430044] [client 10.30.8.22:37154] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:52:12.325078 2026] [php:warn] [pid 1431157] [client 10.30.8.22:37164] PHP Warning:  include(/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php): Failed to open stream: No such file or directory in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:52:12.325113 2026] [php:warn] [pid 1431157] [client 10.30.8.22:37164] PHP Warning:  include(): Failed opening '/srv/users/piuxhnsp/mpsvaba-m4/core../config/path.php' for inclusion (include_path='.:/usr/share/php') in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 7
-[Mon Mar 16 19:52:12.325137 2026] [php:warn] [pid 1431157] [client 10.30.8.22:37164] PHP Warning:  Trying to access array offset on false in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 19:52:12.325155 2026] [php:warn] [pid 1431157] [client 10.30.8.22:37164] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/core/bootstrap.php on line 10
-[Mon Mar 16 22:02:09.112279 2026] [php:warn] [pid 1530422] [client 10.30.8.22:38852] PHP Warning:  Undefined variable $posts in /srv/users/piuxhnsp/mpsvaba-m4/app/Controller/Site.php on line 14
-[Mon Mar 16 22:02:09.112849 2026] [php:warn] [pid 1530422] [client 10.30.8.22:38852] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 4
-[Mon Mar 16 22:02:55.844415 2026] [php:warn] [pid 1531536] [client 10.30.8.22:34624] PHP Warning:  Undefined array key "id" in /srv/users/piuxhnsp/mpsvaba-m4/core/Src/Request.php on line 32
-[Mon Mar 16 22:03:02.830158 2026] [php:warn] [pid 1531537] [client 10.30.8.22:58412] PHP Warning:  Undefined array key "id" in /srv/users/piuxhnsp/mpsvaba-m4/core/Src/Request.php on line 32
-[Mon Mar 16 22:04:03.428036 2026] [php:warn] [pid 1531579] [client 10.30.8.22:53604] PHP Warning:  Undefined array key "id" in /srv/users/piuxhnsp/mpsvaba-m4/core/Src/Request.php on line 32
-[Mon Mar 16 22:19:02.049276 2026] [php:warn] [pid 1543569] [client 10.30.8.22:36680] PHP Warning:  Undefined array key "id" in /srv/users/piuxhnsp/mpsvaba-m4/core/Src/Request.php on line 32
-[Mon Mar 16 22:19:02.641271 2026] [php:warn] [pid 1543569] [client 10.30.8.22:36680] PHP Warning:  Undefined array key "id" in /srv/users/piuxhnsp/mpsvaba-m4/core/Src/Request.php on line 32
-[Mon Mar 16 22:19:33.499683 2026] [php:warn] [pid 1543572] [client 10.30.8.22:36690] PHP Warning:  Undefined array key "id" in /srv/users/piuxhnsp/mpsvaba-m4/core/Src/Request.php on line 32
-[Mon Mar 16 22:19:33.907814 2026] [php:warn] [pid 1543572] [client 10.30.8.22:36690] PHP Warning:  Undefined array key "id" in /srv/users/piuxhnsp/mpsvaba-m4/core/Src/Request.php on line 32
-[Mon Mar 16 23:11:54.132274 2026] [php:error] [pid 1582199] [client 10.30.8.22:51240] PHP Fatal error:  Class Model\\User contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods (Src\\Auth\\IdentityInterface::getUsername, Src\\Auth\\IdentityInterface::getPassword) in /srv/users/piuxhnsp/mpsvaba-m4/app/Model/User.php on line 9
-[Mon Mar 16 23:11:55.010909 2026] [php:error] [pid 1582200] [client 10.30.8.22:51250] PHP Fatal error:  Class Model\\User contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods (Src\\Auth\\IdentityInterface::getUsername, Src\\Auth\\IdentityInterface::getPassword) in /srv/users/piuxhnsp/mpsvaba-m4/app/Model/User.php on line 9
-[Mon Mar 16 23:11:56.156078 2026] [php:error] [pid 1582201] [client 10.30.8.22:51264] PHP Fatal error:  Class Model\\User contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods (Src\\Auth\\IdentityInterface::getUsername, Src\\Auth\\IdentityInterface::getPassword) in /srv/users/piuxhnsp/mpsvaba-m4/app/Model/User.php on line 9
-[Mon Mar 16 23:11:58.371504 2026] [php:error] [pid 1582202] [client 10.30.8.22:43334] PHP Fatal error:  Class Model\\User contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods (Src\\Auth\\IdentityInterface::getUsername, Src\\Auth\\IdentityInterface::getPassword) in /srv/users/piuxhnsp/mpsvaba-m4/app/Model/User.php on line 9
+[Mon Mar 23 21:40:08.974508 2026] [php:warn] [pid 425635] [client 10.30.8.22:58304] PHP Warning:  Undefined variable $subscribers in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 7
+[Mon Mar 23 21:40:08.974568 2026] [php:warn] [pid 425635] [client 10.30.8.22:58304] PHP Warning:  Attempt to read property "subscribers_id" on null in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 7
+[Mon Mar 23 21:40:08.974572 2026] [php:warn] [pid 425635] [client 10.30.8.22:58304] PHP Warning:  Undefined variable $subscribers in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 7
+[Mon Mar 23 21:40:08.974575 2026] [php:warn] [pid 425635] [client 10.30.8.22:58304] PHP Warning:  Attempt to read property "first_name" on null in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 7
+[Mon Mar 23 21:40:09.711122 2026] [php:warn] [pid 425635] [client 10.30.8.22:58304] PHP Warning:  Undefined variable $subscribers in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 7
+[Mon Mar 23 21:40:09.711146 2026] [php:warn] [pid 425635] [client 10.30.8.22:58304] PHP Warning:  Attempt to read property "subscribers_id" on null in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 7
+[Mon Mar 23 21:40:09.711150 2026] [php:warn] [pid 425635] [client 10.30.8.22:58304] PHP Warning:  Undefined variable $subscribers in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 7
+[Mon Mar 23 21:40:09.711153 2026] [php:warn] [pid 425635] [client 10.30.8.22:58304] PHP Warning:  Attempt to read property "first_name" on null in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 7
+[Mon Mar 23 21:40:38.646756 2026] [php:warn] [pid 426811] [client 10.30.8.22:59958] PHP Warning:  Undefined variable $subscribers in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 9
+[Mon Mar 23 21:40:38.646806 2026] [php:warn] [pid 426811] [client 10.30.8.22:59958] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 9
+[Mon Mar 23 21:40:39.348529 2026] [php:warn] [pid 426811] [client 10.30.8.22:59958] PHP Warning:  Undefined variable $subscribers in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 9
+[Mon Mar 23 21:40:39.348554 2026] [php:warn] [pid 426811] [client 10.30.8.22:59958] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 9
+[Mon Mar 23 21:40:49.427756 2026] [php:warn] [pid 426813] [client 10.30.8.22:50516] PHP Warning:  Undefined variable $subscribers in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 9
+[Mon Mar 23 21:40:49.427812 2026] [php:warn] [pid 426813] [client 10.30.8.22:50516] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 9
+[Mon Mar 23 21:40:49.817915 2026] [php:warn] [pid 426813] [client 10.30.8.22:50516] PHP Warning:  Undefined variable $subscribers in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 9
+[Mon Mar 23 21:40:49.817945 2026] [php:warn] [pid 426813] [client 10.30.8.22:50516] PHP Warning:  foreach() argument must be of type array|object, null given in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 9
+[Mon Mar 23 22:15:41.755001 2026] [php:warn] [pid 456074] [client 10.30.8.22:42216] PHP Warning:  Undefined variable $id in /srv/users/piuxhnsp/mpsvaba-m4/app/Controller/Site.php on line 19
+[Mon Mar 23 22:32:51.071313 2026] [php:warn] [pid 469867] [client 10.30.8.22:50848] PHP Warning:  Undefined variable $user in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 2
+[Mon Mar 23 22:32:51.071385 2026] [php:warn] [pid 469867] [client 10.30.8.22:50848] PHP Warning:  Attempt to read property "name" on null in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 2
+[Mon Mar 23 22:32:51.071391 2026] [php:warn] [pid 469867] [client 10.30.8.22:50848] PHP Warning:  Undefined variable $user in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 2
+[Mon Mar 23 22:32:51.071395 2026] [php:warn] [pid 469867] [client 10.30.8.22:50848] PHP Warning:  Attempt to read property "role" on null in /srv/users/piuxhnsp/mpsvaba-m4/views/site/post.php on line 2
+[Mon Mar 23 22:34:35.945944 2026] [php:warn] [pid 471088] [client 10.30.8.22:42992] PHP Warning:  Undefined variable $phones in /srv/users/piuxhnsp/mpsvaba-m4/views/site/hello.php on line 3, referer: http://mpsvaba-m4.wsr.ru/signup
+[Mon Mar 23 22:38:13.641109 2026] [php:error] [pid 473440] [client 10.30.8.22:47972] PHP Fatal error:  Cannot redeclare Controller\\Site::index() in /srv/users/piuxhnsp/mpsvaba-m4/app/Controller/Site.php on line 50, referer: http://mpsvaba-m4.wsr.ru/signup
+[Mon Mar 23 22:38:14.869667 2026] [php:error] [pid 473441] [client 10.30.8.22:47988] PHP Fatal error:  Cannot redeclare Controller\\Site::index() in /srv/users/piuxhnsp/mpsvaba-m4/app/Controller/Site.php on line 50, referer: http://mpsvaba-m4.wsr.ru/signup
+[Mon Mar 23 22:38:16.992431 2026] [php:error] [pid 473442] [client 10.30.8.22:47996] PHP Fatal error:  Cannot redeclare Controller\\Site::index() in /srv/users/piuxhnsp/mpsvaba-m4/app/Controller/Site.php on line 50
+[Mon Mar 23 22:38:17.173002 2026] [php:error] [pid 473443] [client 10.30.8.22:47998] PHP Fatal error:  Cannot redeclare Controller\\Site::index() in /srv/users/piuxhnsp/mpsvaba-m4/app/Controller/Site.php on line 50
+[Wed Mar 25 19:01:47.199511 2026] [php:error] [pid 2606883] [client 10.30.8.22:60014] PHP Fatal error:  Cannot redeclare Controller\\Site::login() in /srv/users/piuxhnsp/mpsvaba-m4/app/Controller/Site.php on line 81, referer: http://mpsvaba-m4.wsr.ru/signup
+[Wed Mar 25 19:01:48.181372 2026] [php:error] [pid 2606894] [client 10.30.8.22:53442] PHP Fatal error:  Cannot redeclare Controller\\Site::login() in /srv/users/piuxhnsp/mpsvaba-m4/app/Controller/Site.php on line 81, referer: http://mpsvaba-m4.wsr.ru/signup
