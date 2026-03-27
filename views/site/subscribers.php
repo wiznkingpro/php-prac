@@ -32,7 +32,6 @@
                     
                     <form method="post" action="<?= app()->route->getUrl('/subscriber/delete') ?>" style="display:inline;">
                         <input type="hidden" name="id" value="<?= $sub->subscribers_id ?>">
-                        <button type="submit" onclick="return confirm('Удалить?')" >delete</button>
                     </form>
                 </td>
             <?php endif; ?>

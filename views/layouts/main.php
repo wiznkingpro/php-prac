@@ -17,27 +17,27 @@
         </div>
         
         <nav class="nav-links">
-            <a href="<?= app()->route->getUrl('/') ?>">Абоненты</a>
-            
-            <?php if (!app()->auth::check()): ?>
-                <a href="<?= app()->route->getUrl('/login') ?>" class="btn-login">Вход</a>
-                <a href="<?= app()->route->getUrl('/signup') ?>" class="btn-signup">Регистрация</a>
-            <?php else: ?>
-                 <a href="<?= app()->route->getUrl('/profile') ?>" class="user-name">
+    <a href="<?= app()->route->getUrl('/') ?>">Абоненты</a>
+    
+    <?php if (!app()->auth::check()): ?>
+        <a href="<?= app()->route->getUrl('/login') ?>" class="btn-login">Вход</a>
+        <a href="<?= app()->route->getUrl('/signup') ?>" class="btn-signup">Регистрация</a>
+    <?php else: ?>
+        <?php if(app()->auth::user()->role === 'super_admin'): ?>
+            <a href="<?= app()->route->getUrl('/super-admin') ?>" style="color: #e74c3c; font-weight: bold;">Панель SuperAdmin</a>
+        <?php endif; ?>
+
+        <a href="<?= app()->route->getUrl('/profile') ?>" class="user-name">
             (<?= app()->auth::user()->first_name ?> <?= app()->auth::user()->last_name ?>)
-                </a>
+        </a>
 
-                
-                <?php if(app()->auth::user()->role === 'admin'): ?>
-                    <a href="<?= app()->route->getUrl('/subscriber/create') ?>" id="add_subs" >+ Добавить</a>
-                <?php endif; ?>
-                
-                <a href="<?= app()->route->getUrl('/logout') ?>" class="btn-logout">Выход</a>
-
-            <?php endif; ?>
-
-        </nav>
-    </div>
+        <?php if(app()->auth::user()->role === 'admin'): ?>
+            <a href="<?= app()->route->getUrl('/subscriber/create') ?>" id="add_subs">+ Добавить</a>
+        <?php endif; ?>
+        
+        <a href="<?= app()->route->getUrl('/logout') ?>" class="btn-logout">Выход</a>
+    <?php endif; ?>
+</nav>
 
 </header>
 

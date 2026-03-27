@@ -9,4 +9,8 @@ class Phone extends Model
     public $timestamps = false;
     protected $fillable = ['phone_number', 'subscribers_id', 'device_id', 'status'];
 
+    public function subscriber()
+    {
+        return $this->belongsTo(Subscriber::class, 'subscribers_id', 'subscribers_id');
+    }
 }

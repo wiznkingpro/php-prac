@@ -26,3 +26,6 @@ Route::add('GET|POST', '/subscriber/edit', [Controller\Site::class, 'editSubscri
 Route::add('GET', '/subscriber/edit', [Controller\Site::class, 'editSubscriber']);
 Route::add('POST', '/subscriber/update', [Controller\Site::class, 'updateSubscriber']);
 Route::add('POST', '/subscriber/delete', [Controller\Site::class, 'deleteSubscriber']);
+
+Route::add('GET', '/super-admin', [Controller\Site::class, 'superAdminPanel']);
+Route::add('POST', '/set-role', [Controller\Site::class, 'setRole']);

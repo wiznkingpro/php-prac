@@ -160,5 +160,33 @@ class Site
         $user = Auth::user();
 
         return (new View())->render('site.profile', ['user' => $user]);
+    }
+    public function superAdminPanel(Request $request): string
+{
+    if (!Auth::user() || Auth::user()->role !== 'super_admin') {
+        app()->route->redirect('/');
+    }
+
+    $admins = User::whereIn('role', ['admin', 'user', 'super_admin'])->get();
+    $allPhones = Phone::with('subscriber')->get();
+
+    return (new View())->render('site.super_admin', [
+        'admins' => $admins,
+        'phones' => $allPhones
+    ]);
+}
+
+public function setRole(Request $request): void
+{
+    if (Auth::user() && Auth::user()->role === 'super_admin') {
+        $userId = $request->get('user_id');
+        $newRole = $request->get('role');
+        $user = User::where('users_id', $userId)->first();
+        if ($user && (int)$user->users_id !== (int)Auth::user()->users_id) {
+            $user->role = $newRole;
+            $user->save();
+        }
+    }
+    app()->route->redirect('/super-admin');
 }
 }
