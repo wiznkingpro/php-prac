@@ -1,6 +1,7 @@
-<h1>Панель Супер-Администратора</h1>
-
+<h1>Администратор системы</h1>
+<a href="<?= app()->route->getUrl('/signup') ?>" class="btn-signup">Регистрация Пользователя</a>
 <div style="display: flex; gap: 50px;">
+
     <section>
         <h2>Справочник всех номеров</h2>
         <table border="1">
@@ -24,7 +25,9 @@
     </section>
 
     <section>
+
         <h2>Управление ролями</h2>
+
         <table border="1">
             <thead>
                 <tr>

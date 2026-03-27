@@ -38,15 +38,28 @@ class Site
 
 
     public function signup(Request $request): string
-    {
-        if ($request->method === 'POST') {
-            if (User::create($request->all())) {
-                app()->route->redirect('/login');
-            }
+{
+    if ($request->method === 'POST') {
+        $data = $request->all();
+        $exists = User::where('login', $data['login'])->first();
+
+        if ($exists) {
+            $departments = Department::all();
+            return (new View())->render('site.signup', [
+                'departments' => $departments,
+                'message' => 'Этот логин уже занят'
+            ]);
         }
-        $departments = Department::all();
-        return (new View())->render('site.signup', ['departments' => $departments]);
+
+        if (User::create($data)) {
+            return (new View())->render('site.signup', ['message' => 'Пользователь зарегистрирован']);
+
+        }
     }
+    
+    $departments = Department::all();
+    return (new View())->render('site.signup', ['departments' => $departments]);
+}
 
     public function login(Request $request): string
     {

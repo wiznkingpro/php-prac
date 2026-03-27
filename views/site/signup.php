@@ -1,7 +1,8 @@
 <h2>Регистрация нового пользователя</h2>
 <h3><?= $message ?? ''; ?></h3>
 <form method="post">
-   <input type="text" name="last_name" placeholder="Фамилия">
+<input type="text" name="login" placeholder="Логин">
+<input type="text" name="last_name" placeholder="Фамилия">
 <input type="text" name="first_name" placeholder="Имя">
 <input type="text" name="middle_name" placeholder="Отчество">
 <input type="password" name="password" placeholder="Пароль">
@@ -14,5 +15,5 @@
         <option value="<?= $dept->departments_id ?>"><?= $dept->name ?></option>
     <?php endforeach; ?>
 </select>
-<button>Зарегистрироваться</button>
+<button>Зарегистрировать</button>
 </form>

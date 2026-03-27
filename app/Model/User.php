@@ -45,7 +45,7 @@ class User extends Model implements IdentityInterface
     public function attemptIdentity(array $credentials)
     {
         return self::where([
-            'last_name' => $credentials['last_name'], 
+            'login' => $credentials['login'], 
             'password' => md5($credentials['password'])
         ])->first();
     }

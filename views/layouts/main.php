@@ -21,7 +21,6 @@
     
     <?php if (!app()->auth::check()): ?>
         <a href="<?= app()->route->getUrl('/login') ?>" class="btn-login">Вход</a>
-        <a href="<?= app()->route->getUrl('/signup') ?>" class="btn-signup">Регистрация</a>
     <?php else: ?>
         <?php if(app()->auth::user()->role === 'super_admin'): ?>
             <a href="<?= app()->route->getUrl('/super-admin') ?>" style="color: #e74c3c; font-weight: bold;">Панель SuperAdmin</a>
