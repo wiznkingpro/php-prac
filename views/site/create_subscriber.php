@@ -2,24 +2,40 @@
 
 <form method="post">
    <?= csrf_field() ?>
-   <input type="text" name="last_name" placeholder="Фамилия" required>
-   <input type="text" name="first_name" placeholder="Имя" required>
-   <input type="text" name="middle_name" placeholder="Отчество">
-   
-   <label>Дата рождения:</label>
-   <input type="date" name="birth_date" required>
-
-   <label>ID Комнаты:</label>
-   <input type="number" name="rooms_id" required>
-
+   <div>
+       <label>Фамилия:</label><br>
+       <input type="text" name="last_name" placeholder="Фамилия" required>
+   </div>
+   <div>
+       <label>Имя:</label><br>
+       <input type="text" name="first_name" placeholder="Имя" required>
+   </div>
+   <div>
+       <label>Отчество:</label><br>
+       <input type="text" name="middle_name" placeholder="Отчество">
+   </div>
+   <div>
+       <label>Дата рождения:</label><br>
+       <input type="date" name="birth_date" required>
+   </div>
+   <div>
+       <label>Помещение:</label><br>
+       <select name="rooms_id" required>
+           <option value="" disabled selected>-- Выберите помещение --</option>
+           <?php if (!empty($rooms)): ?>
+               <?php foreach ($rooms as $room): ?>
+                   <option value="<?= (int)$room->rooms_id ?>">
+                       <?= e($room->room_name) ?> (<?= e($room->room_type) ?>, <?= e($room->department->name ?? '—') ?>)
+                   </option>
+               <?php endforeach; ?>
+           <?php endif; ?>
+       </select>
+   </div>
    <hr>
-   <label>Номер телефона:</label>
-   <input type="text" name="phone_number" placeholder="Напр: 89991234567" required>
-   
-   <label>ID Устройства (опционально):</label>
-   <input type="number" name="device_id" value="1">
-
-   <button type="submit">
-       Создать абонента и закрепить номер
-   </button>
+   <div>
+       <label>Номер телефона:</label><br>
+       <input type="text" name="phone_number" placeholder="Напр: 89991234567" required>
+   </div>
+   <br>
+   <button type="submit">Создать абонента и закрепить номер</button>
 </form>

@@ -15,12 +15,19 @@
         "php": "^7.4 | ^8.0",
         "laravel/database": "dev-master",
         "illuminate/events": "8.x-dev",
-        "nikic/fast-route": "v1.x-dev"
+        "nikic/fast-route": "v1.x-dev",
+        "wiznkingpro/collect": "^1.0"
     },
     "autoload": {
        "psr-4": {
            "Src\\": "core/Src/",
            "": "app/"
        }
-   }
+   },
+    "repositories": {
+        "collect": {
+            "type": "vcs",
+            "url": "https://github.com/wiznkingpro/collect.git"
+        }
+    }
 }

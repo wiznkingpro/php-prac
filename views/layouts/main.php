@@ -22,17 +22,21 @@
     <?php if (!app()->auth::check()): ?>
         <a href="<?= app()->route->getUrl('/login') ?>" class="btn-login">Вход</a>
     <?php else: ?>
+        <?php if(app()->auth::user()->role === 'admin' || app()->auth::user()->role === 'super_admin'): ?>
+            <a href="<?= app()->route->getUrl('/departments') ?>">Подразделения</a>
+            <a href="<?= app()->route->getUrl('/rooms') ?>">Помещения</a>
+            <a href="<?= app()->route->getUrl('/phones') ?>">Телефоны</a>
+            <a href="<?= app()->route->getUrl('/stats') ?>">Статистика</a>
+            <a href="<?= app()->route->getUrl('/subscriber/create') ?>" id="add_subs">+ Абонент</a>
+        <?php endif; ?>
+
         <?php if(app()->auth::user()->role === 'super_admin'): ?>
-            <a href="<?= app()->route->getUrl('/super-admin') ?>" style="color: #e74c3c; font-weight: bold;">Панель SuperAdmin</a>
+            <a href="<?= app()->route->getUrl('/super-admin') ?>" style="color: #e74c3c; font-weight: bold;">SuperAdmin</a>
         <?php endif; ?>
 
         <a href="<?= app()->route->getUrl('/profile') ?>" class="user-name">
             (<?= e(app()->auth::user()->first_name) ?> <?= e(app()->auth::user()->last_name) ?>)
         </a>
-
-        <?php if(app()->auth::user()->role === 'admin'): ?>
-            <a href="<?= app()->route->getUrl('/subscriber/create') ?>" id="add_subs">+ Добавить</a>
-        <?php endif; ?>
         
         <a href="<?= app()->route->getUrl('/logout') ?>" class="btn-logout">Выход</a>
     <?php endif; ?>
