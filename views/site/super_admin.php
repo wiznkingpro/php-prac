@@ -15,9 +15,9 @@
             <tbody>
                 <?php foreach ($phones as $phone): ?>
                 <tr>
-                    <td><?= $phone->phone_number ?></td>
-                    <td><?= $phone->subscriber->last_name ?? '—' ?></td>
-                    <td><?= $phone->status ?></td>
+                    <td><?= e($phone->phone_number) ?></td>
+                    <td><?= e($phone->subscriber->last_name ?? '—') ?></td>
+                    <td><?= e($phone->status) ?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -39,11 +39,12 @@
             <tbody>
                 <?php foreach ($admins as $user): ?>
                 <tr>
-                    <td><?= $user->first_name ?> <?= $user->last_name ?></td>
-                    <td><b><?= $user->role ?></b></td>
+                    <td><?= e("{$user->first_name} {$user->last_name}") ?></td>
+                    <td><b><?= e($user->role) ?></b></td>
                     <td>
-                        <form method="POST" action="/set-role">
-                            <input type="hidden" name="user_id" value="<?= $user->users_id ?>">
+                        <form method="POST" action="<?= app()->route->getUrl('/set-role') ?>">
+                            <?= csrf_field() ?>
+                            <input type="hidden" name="user_id" value="<?= (int)$user->users_id ?>">
                             <select name="role">
                                 <option value="user" <?= $user->role == 'user' ? 'selected' : '' ?>>User</option>
                                 <option value="admin" <?= $user->role == 'admin' ? 'selected' : '' ?>>Admin</option>

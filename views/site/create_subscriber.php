@@ -1,6 +1,7 @@
 <h2>Регистрация нового абонента и номера</h2>
 
 <form method="post">
+   <?= csrf_field() ?>
    <input type="text" name="last_name" placeholder="Фамилия" required>
    <input type="text" name="first_name" placeholder="Имя" required>
    <input type="text" name="middle_name" placeholder="Отчество">

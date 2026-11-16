@@ -27,7 +27,7 @@
         <?php endif; ?>
 
         <a href="<?= app()->route->getUrl('/profile') ?>" class="user-name">
-            (<?= app()->auth::user()->first_name ?> <?= app()->auth::user()->last_name ?>)
+            (<?= e(app()->auth::user()->first_name) ?> <?= e(app()->auth::user()->last_name) ?>)
         </a>
 
         <?php if(app()->auth::user()->role === 'admin'): ?>
