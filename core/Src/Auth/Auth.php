@@ -38,8 +38,11 @@ class Auth
    //Возврат текущего аутентифицированного пользователя
    public static function user()
    {
-       $id = Session::get('id') ?? 0;
-       return self::$user->findIdentity($id);
+       $id = Session::get('id');
+       if (!$id) {
+           return null;
+       }
+       return self::$user->findIdentity((int)$id);
    }
 
    //Проверка является ли текущий пользователь аутентифицированным
