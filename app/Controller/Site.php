@@ -7,6 +7,7 @@ use Model\Subscriber;
 use Model\User;
 use Model\Device;
 use Model\Department;
+use Model\Room;
 use Src\View;
 use Src\Request;
 use Src\Auth\Auth;
@@ -15,7 +16,7 @@ class Site
 {
     public function allSubscribers(Request $request): string
     {
-        $query = Subscriber::with('phones');
+        $query = Subscriber::with(['phones', 'room.department']);
 
         if ($search = $request->get('search')) {
             $query->where(function($q) use ($search) {
@@ -166,7 +167,8 @@ class Site
                 app()->route->redirect('/');
             }
         }
-        return (new View())->render('site.create_subscriber');
+        $rooms = Room::with('department')->get();
+        return (new View())->render('site.create_subscriber', ['rooms' => $rooms]);
     }
 
     public function editSubscriber(Request $request): string
@@ -259,5 +261,297 @@ class Site
             }
         }
         app()->route->redirect('/super-admin');
+    }
+
+    public function departments(Request $request): string
+    {
+        $departments = Department::all();
+        return (new View())->render('site.departments', ['departments' => $departments]);
+    }
+
+    public function createDepartment(Request $request): void
+    {
+        if (Auth::user() && (Auth::user()->role === 'admin' || Auth::user()->role === 'super_admin')) {
+            $name = trim($request->get('name') ?? '');
+            $type = trim($request->get('type') ?? '');
+            if (!empty($name) && !empty($type)) {
+                Department::create([
+                    'name' => $name,
+                    'type' => $type
+                ]);
+            }
+        }
+        app()->route->redirect('/departments');
+    }
+
+    public function rooms(Request $request): string
+    {
+        $rooms = Room::with('department')->get();
+        $departments = Department::all();
+        return (new View())->render('site.rooms', ['rooms' => $rooms, 'departments' => $departments]);
+    }
+
+    public function createRoom(Request $request): void
+    {
+        if (Auth::user() && (Auth::user()->role === 'admin' || Auth::user()->role === 'super_admin')) {
+            $name = trim($request->get('room_name') ?? '');
+            $type = trim($request->get('room_type') ?? '');
+            $deptId = (int)($request->get('departments_id') ?? 0);
+            if (!empty($name) && !empty($type) && $deptId > 0) {
+                Room::create([
+                    'room_name' => $name,
+                    'room_type' => $type,
+                    'departments_id' => $deptId
+                ]);
+            }
+        }
+        app()->route->redirect('/rooms');
+    }
+
+    public function phones(Request $request): string
+    {
+        $phones = Phone::with(['subscriber.room.department'])->get();
+        $subscribers = Subscriber::all();
+        return (new View())->render('site.phones', ['phones' => $phones, 'subscribers' => $subscribers]);
+    }
+
+    public function createPhone(Request $request): void
+    {
+        if (Auth::user() && (Auth::user()->role === 'admin' || Auth::user()->role === 'super_admin')) {
+            $phoneNumber = trim($request->get('phone_number') ?? '');
+            $subId = !empty($request->get('subscribers_id')) ? (int)$request->get('subscribers_id') : null;
+            if (!empty($phoneNumber)) {
+                Phone::create([
+                    'phone_number' => $phoneNumber,
+                    'subscribers_id' => $subId,
+                    'device_id' => 1,
+                    'status' => 'active'
+                ]);
+            }
+        }
+        app()->route->redirect('/phones');
+    }
+
+    public function attachPhone(Request $request): void
+    {
+        if (Auth::user() && (Auth::user()->role === 'admin' || Auth::user()->role === 'super_admin')) {
+            $phoneId = (int)($request->get('phones_id') ?? 0);
+            $subId = (int)($request->get('subscribers_id') ?? 0);
+            $phone = Phone::where('phones_id', $phoneId)->first();
+            if ($phone && $subId > 0) {
+                $phone->subscribers_id = $subId;
+                $phone->save();
+            }
+        }
+        app()->route->redirect('/phones');
+    }
+
+    public function subscriberPhones(Request $request): string
+    {
+        $subId = (int)($request->get('id') ?? $request->id);
+        $subscriber = Subscriber::with(['phones', 'room.department'])->where('subscribers_id', $subId)->first();
+        
+        $phones = collect($subscriber ? $subscriber->phones->toArray() : [])->all();
+
+        return (new View())->render('site.subscriber_phones', [
+            'subscriber' => $subscriber,
+            'phones' => $phones
+        ]);
+    }
+
+    public function departmentPhones(Request $request): string
+    {
+        $deptId = (int)($request->get('id') ?? $request->id ?? 0);
+        $departments = Department::all();
+        $selectedDepartment = $deptId ? Department::where('departments_id', $deptId)->first() : null;
+
+        $allPhones = Phone::with(['subscriber.room.department'])->get();
+        $phonesCollection = collect($allPhones->toArray());
+
+        if ($deptId > 0) {
+            $phones = $phonesCollection->filter(function ($item) use ($deptId) {
+                return (int)($item['subscriber']['room']['departments_id'] ?? 0) === $deptId;
+            })->values()->all();
+        } else {
+            $phones = $phonesCollection->all();
+        }
+
+        return (new View())->render('site.department_phones', [
+            'departments' => $departments,
+            'selectedDepartment' => $selectedDepartment,
+            'selectedId' => $deptId,
+            'phones' => $phones
+        ]);
+    }
+
+    public function stats(Request $request): string
+    {
+        $subscribers = Subscriber::with(['room.department'])->get();
+        $subCollection = collect($subscribers->toArray());
+
+        $byDept = [];
+        $byRm = [];
+
+        foreach ($subCollection as $item) {
+            $dName = $item['room']['department']['name'] ?? 'Без подразделения';
+            $byDept[$dName] = ($byDept[$dName] ?? 0) + 1;
+
+            $rName = $item['room']['room_name'] ?? 'Без помещения';
+            $byRm[$rName] = ($byRm[$rName] ?? 0) + 1;
+        }
+
+        $byDepartment = collect($byDept)->all();
+        $byRoom = collect($byRm)->all();
+
+        return (new View())->render('site.stats', [
+            'byDepartment' => $byDepartment,
+            'byRoom' => $byRoom
+        ]);
+    }
+
+    // --- JSON API (ПР6) ---
+
+    private function json($data, int $status = 200): void
+    {
+        http_response_code($status);
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+
+    public function apiSubscribers(Request $request): void
+    {
+        $subscribers = Subscriber::with(['phones', 'room.department'])->get();
+        $this->json(['success' => true, 'data' => collect($subscribers->toArray())->all()]);
+    }
+
+    public function apiSubscriber(Request $request): void
+    {
+        $id = (int)($request->get('id') ?? $request->id);
+        $subscriber = Subscriber::with(['phones', 'room.department'])->where('subscribers_id', $id)->first();
+        if (!$subscriber) {
+            $this->json(['success' => false, 'error' => 'Subscriber not found'], 404);
+        }
+        $this->json(['success' => true, 'data' => $subscriber->toArray()]);
+    }
+
+    public function apiCreateSubscriber(Request $request): void
+    {
+        if (!Auth::check() || (Auth::user()->role !== 'admin' && Auth::user()->role !== 'super_admin')) {
+            $this->json(['success' => false, 'error' => 'Forbidden'], 403);
+        }
+
+        $data = $request->all();
+        if (empty($data['last_name']) || empty($data['first_name'])) {
+            $this->json(['success' => false, 'error' => 'last_name and first_name required'], 400);
+        }
+
+        $subscriber = Subscriber::create([
+            'last_name' => trim($data['last_name']),
+            'first_name' => trim($data['first_name']),
+            'middle_name' => trim($data['middle_name'] ?? ''),
+            'birth_date' => $data['birth_date'] ?? null,
+            'rooms_id' => (int)($data['rooms_id'] ?? 1),
+            'status' => 'active'
+        ]);
+
+        if (!empty($data['phone_number'])) {
+            Phone::create([
+                'phone_number' => trim($data['phone_number']),
+                'subscribers_id' => $subscriber->subscribers_id,
+                'device_id' => 1,
+                'status' => 'active'
+            ]);
+        }
+
+        $this->json(['success' => true, 'data' => $subscriber->load(['phones', 'room.department'])], 201);
+    }
+
+    public function apiSubscriberPhones(Request $request): void
+    {
+        $subId = (int)($request->get('id') ?? $request->id);
+        $subscriber = Subscriber::with('phones')->where('subscribers_id', $subId)->first();
+        if (!$subscriber) {
+            $this->json(['success' => false, 'error' => 'Subscriber not found'], 404);
+        }
+        $phones = collect($subscriber->phones->toArray())->all();
+        $this->json(['success' => true, 'subscriber' => $subscriber->last_name, 'phones' => $phones]);
+    }
+
+    public function apiDepartmentPhones(Request $request): void
+    {
+        $deptId = (int)($request->get('id') ?? $request->id ?? 0);
+        $allPhones = Phone::with(['subscriber.room.department'])->get();
+        $collection = collect($allPhones->toArray());
+
+        if ($deptId > 0) {
+            $phones = $collection->filter(function ($item) use ($deptId) {
+                return (int)($item['subscriber']['room']['departments_id'] ?? 0) === $deptId;
+            })->values()->all();
+        } else {
+            $phones = $collection->all();
+        }
+
+        $this->json(['success' => true, 'department_id' => $deptId, 'phones' => $phones]);
+    }
+
+    public function apiStatsCounts(Request $request): void
+    {
+        $subscribers = Subscriber::with(['room.department'])->get();
+        $collection = collect($subscribers->toArray());
+
+        $byDept = [];
+        $byRm = [];
+
+        foreach ($collection as $item) {
+            $dName = $item['room']['department']['name'] ?? 'Без подразделения';
+            $byDept[$dName] = ($byDept[$dName] ?? 0) + 1;
+
+            $rName = $item['room']['room_name'] ?? 'Без помещения';
+            $byRm[$rName] = ($byRm[$rName] ?? 0) + 1;
+        }
+
+        $this->json([
+            'success' => true,
+            'by_department' => collect($byDept)->all(),
+            'by_room' => collect($byRm)->all()
+        ]);
+    }
+
+    public function apiDepartments(Request $request): void
+    {
+        $departments = Department::with('rooms')->get();
+        $this->json(['success' => true, 'data' => collect($departments->toArray())->all()]);
+    }
+
+    public function apiRooms(Request $request): void
+    {
+        $rooms = Room::with('department')->get();
+        $this->json(['success' => true, 'data' => collect($rooms->toArray())->all()]);
+    }
+
+    public function apiPhones(Request $request): void
+    {
+        $phones = Phone::with(['subscriber.room.department'])->get();
+        $this->json(['success' => true, 'data' => collect($phones->toArray())->all()]);
+    }
+
+    public function apiAttachPhone(Request $request): void
+    {
+        if (!Auth::check() || (Auth::user()->role !== 'admin' && Auth::user()->role !== 'super_admin')) {
+            $this->json(['success' => false, 'error' => 'Forbidden'], 403);
+        }
+
+        $phoneId = (int)($request->get('phones_id') ?? 0);
+        $subId = (int)($request->get('subscribers_id') ?? 0);
+        $phone = Phone::where('phones_id', $phoneId)->first();
+        if (!$phone || !$subId) {
+            $this->json(['success' => false, 'error' => 'Phone or subscriber not found'], 404);
+        }
+
+        $phone->subscribers_id = $subId;
+        $phone->save();
+
+        $this->json(['success' => true, 'data' => $phone]);
     }
 }
