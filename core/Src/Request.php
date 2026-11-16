@@ -12,9 +12,9 @@ class Request
 
    public function __construct()
    {
-       $this->body = $_REQUEST;
-       $this->method = $_SERVER['REQUEST_METHOD'];
-       $this->headers = getallheaders() ?? [];
+       $this->body = $_REQUEST ?? [];
+       $this->method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+       $this->headers = function_exists('getallheaders') ? (getallheaders() ?: []) : [];
    }
 
    public function all(): array

@@ -7,6 +7,10 @@ use Illuminate\Database\Schema\Blueprint;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+if (!defined('PHPUNIT_RUNNING')) {
+    define('PHPUNIT_RUNNING', true);
+}
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }

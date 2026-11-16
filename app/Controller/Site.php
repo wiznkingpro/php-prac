@@ -411,12 +411,16 @@ class Site
 
     // --- JSON API (ПР6) ---
 
-    private function json($data, int $status = 200): void
+    public function json($data, int $status = 200): void
     {
-        http_response_code($status);
-        header('Content-Type: application/json; charset=utf-8');
+        if (!headers_sent()) {
+            http_response_code($status);
+            header('Content-Type: application/json; charset=utf-8');
+        }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
-        exit;
+        if (!defined('PHPUNIT_RUNNING')) {
+            exit;
+        }
     }
 
     public function apiSubscribers(Request $request): void
