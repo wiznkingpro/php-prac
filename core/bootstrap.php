@@ -27,9 +27,11 @@ function app() {
    return $app;
 }
 
-function e($value): string
-{
-   return htmlspecialchars((string)($value ?? ''), ENT_QUOTES, 'UTF-8');
+if (!function_exists('e')) {
+    function e($value): string
+    {
+        return htmlspecialchars((string)($value ?? ''), ENT_QUOTES, 'UTF-8');
+    }
 }
 
 function csrf_token(): string
