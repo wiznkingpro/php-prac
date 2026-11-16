@@ -13,4 +13,9 @@ class Phone extends Model
     {
         return $this->belongsTo(Subscriber::class, 'subscribers_id', 'subscribers_id');
     }
+
+    public function device()
+    {
+        return $this->belongsTo(Device::class, 'device_id', 'device_id');
+    }
 }

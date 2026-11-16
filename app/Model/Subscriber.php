@@ -25,6 +25,11 @@ class Subscriber extends Model
         return $this->belongsTo(User::class, 'users_id', 'users_id');
     }
 
+    public function room()
+    {
+        return $this->belongsTo(Room::class, 'rooms_id', 'rooms_id');
+    }
+
     // Связь с телефонами
     public function phones()
     {

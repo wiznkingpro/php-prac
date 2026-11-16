@@ -22,4 +22,9 @@ class Room extends Model
     {
         return $this->belongsTo(Department::class, 'departments_id', 'departments_id');
     }
+
+    public function subscribers()
+    {
+        return $this->hasMany(Subscriber::class, 'rooms_id', 'rooms_id');
+    }
 }

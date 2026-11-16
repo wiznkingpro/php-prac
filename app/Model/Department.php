@@ -13,4 +13,9 @@ class Department extends Model
        'type',
        'name'
    ];
+
+   public function rooms()
+   {
+       return $this->hasMany(Room::class, 'departments_id', 'departments_id');
+   }
 }
